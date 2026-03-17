@@ -36,7 +36,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     
     const indexOfLastExercise = currentPage * exercisesPerPage;
     const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-    const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
+    const currentExercises = (exercises || []).slice(indexOfFirstExercise, indexOfLastExercise);
   
     return (
     <Box id="exercises"
